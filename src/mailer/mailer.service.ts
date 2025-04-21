@@ -21,7 +21,7 @@ export class MailerService {
             from: `"Muhammadali's auth" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: "Checking",
-            html: `<h1>${text}</h1> <p>hello</p> <strong>${email}</strong>`
+            html: `<h1 className="text-red-700">${text}</h1> <p>hello</p> <strong>${email}</strong>`
         })
     }
 }

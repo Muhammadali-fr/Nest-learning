@@ -16,19 +16,18 @@ export class UsersService {
     return this.prisma.user.findMany();
   }
 
-  // findOne(id: number) {
-  //   return `This action returns a #${id} user`;
-  // }
-
-  async  findOne(email: string) {
-    const sendRes =  await this.mailerService.sendCode(
-      "welcome to our service",
-      email
-    )
-
-    console.log(sendRes);
-    return `code sent to ${email}`
+  findOne(id: number) {
+    return `This action returns a #${id} user`;
   }
+
+  // async  findOne(email: string) {
+  //   await this.mailerService.sendCode(
+  //     "welcome to our service",
+  //     email
+  //   )
+
+  //   return `code sent to ${email}`
+  // }
 
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} user`;
