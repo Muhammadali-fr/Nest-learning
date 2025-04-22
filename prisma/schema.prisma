@@ -23,8 +23,8 @@ model User {
 }
 
 model Otp {
-  id Int @id @default(autoincrement())
-  email String @unique
-  otp Int 
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  otp       String
   createdAt DateTime @default(now())
 }

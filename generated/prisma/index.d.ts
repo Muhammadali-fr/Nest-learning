@@ -2003,25 +2003,23 @@ export namespace Prisma {
 
   export type OtpAvgAggregateOutputType = {
     id: number | null
-    otp: number | null
   }
 
   export type OtpSumAggregateOutputType = {
     id: number | null
-    otp: number | null
   }
 
   export type OtpMinAggregateOutputType = {
     id: number | null
     email: string | null
-    otp: number | null
+    otp: string | null
     createdAt: Date | null
   }
 
   export type OtpMaxAggregateOutputType = {
     id: number | null
     email: string | null
-    otp: number | null
+    otp: string | null
     createdAt: Date | null
   }
 
@@ -2036,12 +2034,10 @@ export namespace Prisma {
 
   export type OtpAvgAggregateInputType = {
     id?: true
-    otp?: true
   }
 
   export type OtpSumAggregateInputType = {
     id?: true
-    otp?: true
   }
 
   export type OtpMinAggregateInputType = {
@@ -2155,7 +2151,7 @@ export namespace Prisma {
   export type OtpGroupByOutputType = {
     id: number
     email: string
-    otp: number
+    otp: string
     createdAt: Date
     _count: OtpCountAggregateOutputType | null
     _avg: OtpAvgAggregateOutputType | null
@@ -2214,7 +2210,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       email: string
-      otp: number
+      otp: string
       createdAt: Date
     }, ExtArgs["result"]["otp"]>
     composites: {}
@@ -2641,7 +2637,7 @@ export namespace Prisma {
   interface OtpFieldRefs {
     readonly id: FieldRef<"Otp", 'Int'>
     readonly email: FieldRef<"Otp", 'String'>
-    readonly otp: FieldRef<"Otp", 'Int'>
+    readonly otp: FieldRef<"Otp", 'String'>
     readonly createdAt: FieldRef<"Otp", 'DateTime'>
   }
     
@@ -3184,7 +3180,7 @@ export namespace Prisma {
     NOT?: OtpWhereInput | OtpWhereInput[]
     id?: IntFilter<"Otp"> | number
     email?: StringFilter<"Otp"> | string
-    otp?: IntFilter<"Otp"> | number
+    otp?: StringFilter<"Otp"> | string
     createdAt?: DateTimeFilter<"Otp"> | Date | string
   }
 
@@ -3201,7 +3197,7 @@ export namespace Prisma {
     AND?: OtpWhereInput | OtpWhereInput[]
     OR?: OtpWhereInput[]
     NOT?: OtpWhereInput | OtpWhereInput[]
-    otp?: IntFilter<"Otp"> | number
+    otp?: StringFilter<"Otp"> | string
     createdAt?: DateTimeFilter<"Otp"> | Date | string
   }, "id" | "email">
 
@@ -3223,7 +3219,7 @@ export namespace Prisma {
     NOT?: OtpScalarWhereWithAggregatesInput | OtpScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Otp"> | number
     email?: StringWithAggregatesFilter<"Otp"> | string
-    otp?: IntWithAggregatesFilter<"Otp"> | number
+    otp?: StringWithAggregatesFilter<"Otp"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Otp"> | Date | string
   }
 
@@ -3282,47 +3278,47 @@ export namespace Prisma {
 
   export type OtpCreateInput = {
     email: string
-    otp: number
+    otp: string
     createdAt?: Date | string
   }
 
   export type OtpUncheckedCreateInput = {
     id?: number
     email: string
-    otp: number
+    otp: string
     createdAt?: Date | string
   }
 
   export type OtpUpdateInput = {
     email?: StringFieldUpdateOperationsInput | string
-    otp?: IntFieldUpdateOperationsInput | number
+    otp?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type OtpUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
-    otp?: IntFieldUpdateOperationsInput | number
+    otp?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type OtpCreateManyInput = {
     id?: number
     email: string
-    otp: number
+    otp: string
     createdAt?: Date | string
   }
 
   export type OtpUpdateManyMutationInput = {
     email?: StringFieldUpdateOperationsInput | string
-    otp?: IntFieldUpdateOperationsInput | number
+    otp?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type OtpUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
-    otp?: IntFieldUpdateOperationsInput | number
+    otp?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3452,7 +3448,6 @@ export namespace Prisma {
 
   export type OtpAvgOrderByAggregateInput = {
     id?: SortOrder
-    otp?: SortOrder
   }
 
   export type OtpMaxOrderByAggregateInput = {
@@ -3471,7 +3466,6 @@ export namespace Prisma {
 
   export type OtpSumOrderByAggregateInput = {
     id?: SortOrder
-    otp?: SortOrder
   }
 
   export type StringFieldUpdateOperationsInput = {

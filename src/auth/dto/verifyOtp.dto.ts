@@ -5,5 +5,5 @@ export class verifyOtpDto{
     email: string
 
     @IsInt()
-    otp: number
+    otp: string
 }
