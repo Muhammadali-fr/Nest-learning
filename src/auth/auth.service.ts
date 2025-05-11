@@ -22,7 +22,7 @@ export class AuthService {
             create: { email, otp: hashedOtp }
         })
 
-        await this.mailerService.sendCode(
+        this.mailerService.sendCode(
             `here is your otp code dont give it to no one < ${otp} >`,
             email
         )

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as nodemailer from "nodemailer";
-import {Transporter} from "nodemailer";
+import { Transporter } from "nodemailer";
 
 
 @Injectable()
@@ -10,14 +10,14 @@ export class MailerService {
     constructor() {
         this.transporter = nodemailer.createTransport({
             service: "gmail",
-            auth:{
+            auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
             }
         });
     }
-    async sendCode( text: string, email: string) : Promise<void>{
-        await this.transporter.sendMail({
+    sendCode(text: string, email: string) {
+        this.transporter.sendMail({
             from: `"Muhammadali's auth" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: "Checking",
